@@ -1,0 +1,5 @@
+- hosts: all
+  name: a simple localhost ping just to check wether host is available or not
+  tasks:
+    - name: ping
+      shell: ping 127.0.0.1 -c 1

@@ -1,0 +1,10 @@
+- hosts: all
+  name: check wether fuse is installed on raspbian
+  tasks:
+    - name: Gather the package facts
+      ansible.builtin.package_facts:
+        manager: auto
+    - name: check fuse
+      ansible.builtin.debug:
+        msg: "{{ ansible_facts.packages['fuse'] | length }} versions of fuse are installed!"
+      when: "'fuse' in ansible_facts.packages"

@@ -1,0 +1,5 @@
+- name: Reboot kubernetes cluster nodes
+  hosts: all
+  tasks:
+    - name: reboot
+      shell: sudo reboot
