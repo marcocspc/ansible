@@ -1,5 +1,4 @@
 - hosts: all
-  gather_facts: no
   name: a simple localhost ping just to check wether host is available or not
   tasks:
     - name: ping
